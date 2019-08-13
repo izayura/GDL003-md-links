@@ -1,5 +1,106 @@
 # Markdown Links
 
+## Índice
+
+- [Definición](#definicion)
+- [Instalación](#instalacion)
+- [Comandos](#comandos)
+- [Historias de Usuario](#historias-de-usuario)
+- [Diagrama de flujo](#diagrama-de-flujo)
+- [Documentación](#documentación)
+- [CheckList](#checklist)
+
+## Definición
+
+## Instalación
+
+## Comandos
+
+## Historias de Usuario
+
+### Historia de Usuario 1 ( *Versión 1.0* )
+Yo como usuario necesito una librería que me diga en la terminal si tengo un archivo .md en mi proyecto.
+
+**DoD**
+- Analiza los archivos en la carpeta principal del proyecto
+- Si encuentra un archivo .md, imprime en la terminal un mensaje donde se indica que si existe y su ruta
+- Si no encuentra un archivo .md, imprime en la terminal un mensaje de error donde avisa que no existe ningún archivo .md en el proyecto
+
+### Historia de Usuario 2
+Yo como usuario necesito una librería que pueda leer mi archivo .md, busque si existen links en este y los imprima en la terminal(con su Url y nombre).
+
+**DoD**
+- Se puede analizar el contenido del archivo .md
+- Se buscan links dentro del archivo .md
+- Si existe un link, toma su URL y Alt para imprimirlos en la terminal
+
+### Historia de Usuario 3
+Yo como usuario necesito una librería que compruebe si los links utilizados en mi archivo .md son URL válidas o no, y que imprima los resultados en la terminal.
+
+**DoD**
+- Se validan los links dentro del archivo .md y en caso de ser válidos los imprime en la terminal con una leyenda(OK, √)
+- Si el link no es válido, se imprime en la terminal con una leyenda de Error 404 o similar
+
+### Historia de Usuario 4
+Yo como usuario necesito una librería que me muestre en la terminal las estadísticas sobre los links en mi archivo .md
+
+**DoD**
+- Se imprimen en la terminal estadísticas sobre cuantos links son válidos y cuantos no
+
+### Historia de Usuario 5
+HACKER EDITION
+
+**DoD**
+- HACKER EDITION
+
+## Diagrama de flujo
+
+En base a las Historias de Usuario 1,2,3 y 4 se creó un Diagrama de Flujo para facilitar la investigación y realización de esta librería
+
+![Diagrama de Flujo](https://i.ibb.co/T8qCrxw/Diagrama-de-flujo.jpg "Diagrama de Flujo")
+
+## Documentación
+
+## CheckList
+
+### General
+
+- [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+
+### `README.md`
+
+- [ ] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
+- [ ] Un board con el backlog para la implementación de la librería.
+- [ ] Documentación técnica de la librería.
+- [ ] Guía de uso e instalación de la librería
+
+### API `mdLinks(path, opts)`
+
+- [ ] El módulo exporta una función con la interfaz (API) esperada.
+- [ ] Implementa soporte para archivo individual
+- [ ] Implementa soporte para directorios
+- [ ] Implementa `options.validate`
+
+### Pruebas / tests
+
+- [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
+      lines, y branches.
+- [ ] Pasa tests (y linters) (`npm test`).
+
+### CLI
+
+- [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
+- [ ] Se ejecuta sin errores / output esperado
+- [ ] Implementa `--validate`
+- [ ] Implementa `--stats`
+
+### Hacker Edition
+
+- [ ] Crear un script en el package.json que transforme el código ES6+ a ES5.
+- [ ] Puedes agregar la propiedad line a cada objeto link indicando en qué línea del archivo se encontró el link.
+- [ ] Puedes agregar más estadísticas.
+- [ ] Integración continua con Travis o Circle CI.
+
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
@@ -339,7 +440,7 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ## Hacker Edition
 
-- [ ] Crear un script en el package.json que transforme el codigo ES6+ a ES5.
+- [ ] Crear un script en el package.json que transforme el código ES6+ a ES5.
 - [ ] Puedes agregar la propiedad line a cada objeto link indicando en qué línea del archivo se encontró el link.
 - [ ] Puedes agregar más estadísticas.
 - [ ] Integración continua con Travis o Circle CI.
