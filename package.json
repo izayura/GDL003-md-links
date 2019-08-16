@@ -1,4 +1,26 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "description": "- [Definición](#definicion)\r - [Instalación](#instalacion)\r - [Comandos](#comandos)\r - [Historias de Usuario](#historias-de-usuario)\r - [Diagrama de flujo](#diagrama-de-flujo)\r - [Documentación](#documentación)\r - [CheckList](#checklist)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izayura/GDL003-md-links.git"
+  },
+  "author": "Izayura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izayura/GDL003-md-links/issues"
+  },
+  "homepage": "https://github.com/izayura/GDL003-md-links#readme"
 }
