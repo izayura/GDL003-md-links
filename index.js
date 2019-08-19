@@ -1,24 +1,5 @@
-const path = require('path');
+const markdown = require('./markdown.js');
 
-findMD = (filePath) =>{
-  return path.extname(filePath) === '.md' ? true:false;
+console.log('Hola mundo '+ markdown.findMD('./README.md'));
 
-};
-
-findLinks = () => {
-
-};
-
-printLinks = () => {
-
-};
-
-validateLinks = () => {
-
-};
-
-/* module.exports = (filePath) => {
-  return path.extname(filePath) === '.md' ? true:false;
-
-}; */
 
