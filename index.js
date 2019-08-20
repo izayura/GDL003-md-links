@@ -1,5 +1,5 @@
-const markdown = require('./markdown.js');
+require('./markdown.js');
 
-console.log('Hola mundo '+ markdown.findMD('./README.md'));
+console.log('Hola mundo '+ findMD('./README.js'));
 
 

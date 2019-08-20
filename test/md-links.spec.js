@@ -1,5 +1,4 @@
-const mdLinks = require('../markdown.js');
-
+require('../markdown.js');
 
 describe('findMD', () => {
 
