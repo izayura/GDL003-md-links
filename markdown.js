@@ -2,16 +2,18 @@ const path = require('path');
 const fs = require('fs');
 
 findMD = (filePath) => {
-    return path.extname(filePath) === '.md' ? true : false;
+  return path.extname(filePath) === '.md' ? true : false;
 };
 
-readFile = (filePath) => {
-  let contentFile = fs.readFile(filePath, (err, data) => {
-    if (err) throw err;
-    console.log(data.toString());
+readFile = (filePath, callback) => {
+  fs.readFile(filePath, (error, data) => {
+    if (error) {
+      throw error;
+    }
+    callback(data);
   });
- return contentFile;
 };
+
 
 findLinks = () => {
 
