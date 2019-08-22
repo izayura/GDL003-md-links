@@ -6,11 +6,11 @@ findMD = (filePath) => {
 };
 
 readMD = (filePath) => {
-  let readenMD = fs.readFile(filePath, (err, data) => {
+  let contentMD = fs.readFile(filePath, (err, data) => {
     if (err) throw err;
     console.log(data.toString());
   });
- return readenMD;
+ return contentMD;
 };
 
 findLinks = () => {
