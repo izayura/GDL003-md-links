@@ -1,5 +1,7 @@
 require('./markdown.js');
 
-console.log('Hola mundo '+ findMD('./README.js'));
+console.log('Again ' + existsMD('../.md'));
+
+console.log('Hola mundo '+ findMD(process.argv[2]));
 
 
