@@ -1,17 +1,18 @@
 const path = require('path');
 const fs = require('fs');
-// const fs = require('fs');
-existsMD = () => {
-   return fs.readFile('example.md','utf8' (err, data) => {   
-       if (err) throw err;
-    console.log(data);
-  });
-};
 
 findMD = (filePath) => {
     return path.extname(filePath) === '.md' ? true : false;
 };
-module.exports = findMD;
+
+readMD = (filePath) => {
+  let readenMD = fs.readFile(filePath, (err, data) => {
+    if (err) throw err;
+    console.log(data.toString());
+  });
+ return readenMD;
+};
+
 findLinks = () => {
 
 };
@@ -23,6 +24,10 @@ printLinks = () => {
 validateLinks = () => {
 
 };
+module.exports = {
+  findMD,
+  readMD
+}
 /* module.exports = {
     findMD: (filePath) => {
         return path.extname(filePath) === '.md' ? true : false;
