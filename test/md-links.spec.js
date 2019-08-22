@@ -18,6 +18,17 @@ describe('findMD', () => {
 
 });
 
+describe('readFile', () => {
+
+  it('is a function', () => {
+    expect(typeof readFile).toBe('function');
+  });
+
+  it('should read and impress what is in the .md file', () => {
+    expect(readFile('../exampleShort.md')).toBe('Esto es un archivo .md para pasar por los tests.');
+  });
+});
+
 describe('findLinks', () => {
 
   it('is a function', () => {
