@@ -14,9 +14,17 @@ readFile = (filePath, callback) => {
   });
 };
 
+readMD = (filePath, callback) => {
+  if (findMD(filePath) === true){
+console.log("Archivo leido");
+    readFile(filePath, callback);
+  } else{
+    console.log("ERROR, your file it's not a markdown type. Try with a markdown file.");
+  }
+};
 
 findLinks = () => {
-
+  
 };
 
 printLinks = () => {
@@ -28,5 +36,6 @@ validateLinks = () => {
 };
 module.exports = {
   findMD,
-  readFile
+  readFile,
+  readMD
 }

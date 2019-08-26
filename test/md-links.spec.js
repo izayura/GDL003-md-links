@@ -23,10 +23,22 @@ describe('readFile', () => {
     expect(typeof readFile).toBe('function');
   });
 
-  it('should read and impress what is in the .md file', () => {
+  it('should read and impress what is in any kind of file', () => {
   //  expect(readFile('../exampleShort.md'), callback).toBe('Esto es un archivo .md para pasar por los tests.');
  // });
   readFile('../exampleShort.md', (data)=>{
+    expect(data).toBe('Esto es un archivo .md para pasar por los tests.');
+    });
+  });
+});
+
+describe('readMD', () => {
+  it('is a function', () => {
+    expect(typeof readMD).toBe('function');
+  });
+
+  it('should read and impress what is in the .md file', () => {
+  readMD('../exampleShort.md', (data)=>{
     expect(data).toBe('Esto es un archivo .md para pasar por los tests.');
     });
   });
