@@ -13,7 +13,6 @@ readFile = (filePath, callback) => {
     callback(data);
   });
 };
-
 readMD = (filePath, callback) => {
   if (findMD(filePath) === true){
 console.log("Archivo leido");
@@ -22,9 +21,18 @@ console.log("Archivo leido");
     console.log("ERROR, your file it's not a markdown type. Try with a markdown file.");
   }
 };
-
-findLinks = () => {
-  
+/* let resultData;
+readFile((data)=>{
+  resultData=data;
+}); */
+findLinks = (filePath, callback) => {
+  let dataMD = readMD(process.argv[2], (data)=>{
+    console.log('MD ' + data);
+   });
+   let example = "[Laboratoria](https://www.laboratoria.la)";
+   let re = new RegExp(/https?:\S+\w/g);
+   let dataLinks = example.match(re);
+    console.log("Comprobando findLInks "+ dataLinks);
 };
 
 printLinks = () => {
@@ -37,5 +45,6 @@ validateLinks = () => {
 module.exports = {
   findMD,
   readFile,
-  readMD
-}
+  readMD,
+  findLinks
+};

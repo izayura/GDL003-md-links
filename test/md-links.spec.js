@@ -51,7 +51,9 @@ describe('findLinks', () => {
   });
 
   it('should return if there are any link in the .md file', () => {
-    expect(findLinks(filePath)).toBe('https://github.com/izayura/GDL003-md-links.git');
+   findLinks('../linkExample.md', (data)=>{
+      expect(data).toBe(true);
+    });
   });
 });
 
@@ -61,8 +63,10 @@ describe('printLinks', () => {
     expect(typeof printLinks).toBe('function');
   });
 
-  it('should print in terminal the links founded in the .md file', () => {
-    expect(printLinks(filePath)).toBe('https://github.com/izayura/GDL003-md-links.git');
+  it('should print in the terminal the links in the .md file', () => {
+    printLinks('../linkExample.md', (data)=>{
+       expect(data).toBe('https://www.laboratoria.la');
+    });
   });
 });
 
