@@ -13,14 +13,21 @@ readFile = (filePath, callback) => {
     callback(data);
   });
 };
-readMD = (filePath, callback) => {
+readMD = (filePath, callback)=>{
+let read = new Promise((resolve, reject) => {
   if (findMD(filePath) === true){
-console.log("Archivo leido");
-    readFile(filePath, callback);
+  resolve("New Promise");
   } else{
-    console.log("ERROR, your file it's not a markdown type. Try with a markdown file.");
+reject("ERROR")
   }
-};
+});
+read.then((message)=>{
+  console.log("Leido "+message)
+  readFile(filePath, callback);
+}).catch((message)=>{
+  console.log(message+ " your file it's not a markdown type. Try with a markdown file.");
+})
+}
 /* let resultData;
 readFile((data)=>{
   resultData=data;
