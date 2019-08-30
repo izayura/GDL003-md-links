@@ -6,10 +6,13 @@ require('./markdown.js');
 console.log('El contenido de tu archivo es: ' + data);
 }); */
 
-readMD(process.argv[2], (data)=>{
+/* readMD(process.argv[2], (data)=>{
    console.log('The content of your markdown file is: '+  data);
- });
-
-/* findLinks(process.argv[2], (data)=>{
-    console.log('INDEX ' + data);
-   }); */
+ }); */
+//    console.log(readMD(process.argv[2]));
+console.log("HOLA "+findLinks(process.argv[2]));
+ //findLinks(process.argv[2], (data)=>{
+   // console.log('INDEX ' + data);
+   //}); 
+  // console.log(asyncfindLinks());
+  

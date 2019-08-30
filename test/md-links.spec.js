@@ -42,6 +42,9 @@ describe('readMD', () => {
     expect(data).toBe('Esto es un archivo .md para pasar por los tests.');
     });
   });
+  it('should return ERROR if you are not reading a .md file', () => {
+    expect(findMD('../markdown.js')).toBe(false);
+  });
 });
 
 describe('findLinks', () => {
@@ -52,20 +55,7 @@ describe('findLinks', () => {
 
   it('should return if there are any link in the .md file', () => {
    findLinks('../linkExample.md', (data)=>{
-      expect(data).toBe(true);
-    });
-  });
-});
-
-describe('printLinks', () => {
-
-  it('is a function', () => {
-    expect(typeof printLinks).toBe('function');
-  });
-
-  it('should print in the terminal the links in the .md file', () => {
-    printLinks('../linkExample.md', (data)=>{
-       expect(data).toBe('https://www.laboratoria.la');
+      expect(data).toBe('https://www.laboratoria.la');
     });
   });
 });
